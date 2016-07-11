@@ -1,0 +1,15 @@
+/* line 1, /Users/holden/Code/paid-projects/festcamp/app/assets/stylesheets/gYp-2O03SA/pillar_overwrites.scss */
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 6, /Users/holden/Code/paid-projects/festcamp/app/assets/stylesheets/gYp-2O03SA/pillar_overwrites.scss */
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 10, /Users/holden/Code/paid-projects/festcamp/app/assets/stylesheets/gYp-2O03SA/pillar_overwrites.scss */
+footer .footer__navigation {
+  margin-bottom: 0;
+}
