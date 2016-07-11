@@ -195,8 +195,8 @@ hr {
 }
 a:hover,
 a:focus,
-a:active {
-  text-decoration: none;
+a.active {
+  text-decoration: underline;
   outline: none;
 }
 /*! Typography -- Helpers */
