@@ -895,11 +895,39 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))(?:\.([^\/.?]+))?$'>
     /:edition_id(.:format)
   </td>
-  <td data-route-reqs='editions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    editions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='editions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    editions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edition_articles'>
+      edition_articles<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/:edition_id/articles(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/articles(?:\.([^\/.?]+))?$'>
+    /:edition_id/articles(.:format)
+  </td>
+  <td data-route-reqs='articles#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    articles#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edition_article'>
+      edition_article<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/:edition_id/articles/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/articles\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /:edition_id/articles/:id(.:format)
+  </td>
+  <td data-route-reqs='articles#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    articles#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -909,11 +937,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/artists(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/artists(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/artists(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/artists(?:\.([^\/.?]+))?$'>
     /:edition_id/artists(.:format)
   </td>
-  <td data-route-reqs='artists#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    artists#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='artists#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    artists#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -923,11 +951,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/artists/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/artists\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/artists/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/artists\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/artists/:id(.:format)
   </td>
-  <td data-route-reqs='artists#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    artists#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='artists#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    artists#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -937,11 +965,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/events(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/events(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/events(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/events(?:\.([^\/.?]+))?$'>
     /:edition_id/events(.:format)
   </td>
-  <td data-route-reqs='events#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    events#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='events#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    events#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -951,11 +979,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/events/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/events/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/events/:id(.:format)
   </td>
-  <td data-route-reqs='events#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    events#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='events#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    events#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -965,11 +993,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/exhibitions/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/exhibitions/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/exhibitions/:id(.:format)
   </td>
-  <td data-route-reqs='exhibitions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    exhibitions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='exhibitions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    exhibitions#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -979,11 +1007,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/films(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/films(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/films(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/films(?:\.([^\/.?]+))?$'>
     /:edition_id/films(.:format)
   </td>
-  <td data-route-reqs='films#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    films#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='films#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    films#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -993,11 +1021,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/films/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/films\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/films/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/films\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/films/:id(.:format)
   </td>
-  <td data-route-reqs='films#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    films#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='films#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    films#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1007,11 +1035,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/pages(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/pages(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/pages(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/pages(?:\.([^\/.?]+))?$'>
     /:edition_id/pages(.:format)
   </td>
-  <td data-route-reqs='pages#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    pages#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='pages#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    pages#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1021,11 +1049,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/partners(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/partners(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/partners(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/partners(?:\.([^\/.?]+))?$'>
     /:edition_id/partners(.:format)
   </td>
-  <td data-route-reqs='partners#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    partners#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='partners#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    partners#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1035,11 +1063,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/partners/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/partners\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/partners/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/partners\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/partners/:id(.:format)
   </td>
-  <td data-route-reqs='partners#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    partners#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='partners#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    partners#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1049,11 +1077,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/people(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/people(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/people(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/people(?:\.([^\/.?]+))?$'>
     /:edition_id/people(.:format)
   </td>
-  <td data-route-reqs='people#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    people#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='people#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    people#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1063,11 +1091,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/people/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/people\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/people/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/people\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/people/:id(.:format)
   </td>
-  <td data-route-reqs='people#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    people#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='people#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    people#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1077,11 +1105,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/venues/:venue_id/exhibitions(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/venues\/([^\/.?]+)\/exhibitions(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/venues/:venue_id/exhibitions(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/venues\/([^\/.?]+)\/exhibitions(?:\.([^\/.?]+))?$'>
     /:edition_id/venues/:venue_id/exhibitions(.:format)
   </td>
-  <td data-route-reqs='exhibitions#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    exhibitions#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='exhibitions#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    exhibitions#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1091,11 +1119,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/venues(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/venues(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/venues(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/venues(?:\.([^\/.?]+))?$'>
     /:edition_id/venues(.:format)
   </td>
-  <td data-route-reqs='venues#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    venues#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='venues#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    venues#index {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1105,11 +1133,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/venues/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/venues\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/venues/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/venues\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/venues/:id(.:format)
   </td>
-  <td data-route-reqs='venues#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    venues#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='venues#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    venues#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -1119,11 +1147,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:edition_id/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu))\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:edition_id/:id(.:format)' data-regexp='^\/((fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms))\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:edition_id/:id(.:format)
   </td>
-  <td data-route-reqs='pages#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}'>
-    pages#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|forms|cu/}
+  <td data-route-reqs='pages#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}'>
+    pages#show {:edition_id=&gt;/fmf-tour-edition|surprise|2015|amadora-bd-2015|london-2013|new-york-2014|superfestival|the-end|interference|the-dream|dislocation|cu|surprises|forms/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3901,11 +3929,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))(?:\.([^\/.?]+))?$'>
     /:organization_token(.:format)
   </td>
-  <td data-route-reqs='press/editions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/editions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/editions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/editions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3915,11 +3943,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id(.:format)
   </td>
-  <td data-route-reqs='press/editions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/editions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/editions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/editions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3929,11 +3957,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/events(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/events(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/events(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/events(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/events(.:format)
   </td>
-  <td data-route-reqs='press/events#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/events#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/events#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/events#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3943,11 +3971,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/exhibitions(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/exhibitions(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/exhibitions(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/exhibitions(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/exhibitions(.:format)
   </td>
-  <td data-route-reqs='press/exhibitions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/exhibitions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/exhibitions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/exhibitions#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3957,11 +3985,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/pages(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/pages(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/pages(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/pages(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/pages(.:format)
   </td>
-  <td data-route-reqs='press/pages#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/pages#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/pages#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/pages#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3971,11 +3999,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/artists(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/artists(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/artists(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/artists(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/artists(.:format)
   </td>
-  <td data-route-reqs='press/artists#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/artists#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/artists#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/artists#index {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3985,11 +4013,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/events/:event_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/events/:event_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/events/:event_id(.:format)
   </td>
-  <td data-route-reqs='press/events#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/events#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/events#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/events#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -3998,11 +4026,11 @@
   <td data-route-verb='PATCH'>
     PATCH
   </td>
-  <td data-route-path='/:organization_token/:edition_id/events/:event_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/events/:event_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/events\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/events/:event_id(.:format)
   </td>
-  <td data-route-reqs='press/events#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/events#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/events#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/events#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4012,11 +4040,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)
   </td>
-  <td data-route-reqs='press/exhibitions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/exhibitions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/exhibitions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/exhibitions#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4025,11 +4053,11 @@
   <td data-route-verb='PATCH'>
     PATCH
   </td>
-  <td data-route-path='/:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/exhibitions\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/exhibitions/:exhibition_id(.:format)
   </td>
-  <td data-route-reqs='press/exhibitions#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/exhibitions#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/exhibitions#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/exhibitions#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4039,11 +4067,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/artists/:artist_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/artists\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/artists/:artist_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/artists\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/artists/:artist_id(.:format)
   </td>
-  <td data-route-reqs='press/artists#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/artists#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/artists#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/artists#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4053,11 +4081,11 @@
   <td data-route-verb='GET'>
     GET
   </td>
-  <td data-route-path='/:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/events\/([^\/.?]+)\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/events\/([^\/.?]+)\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)
   </td>
-  <td data-route-reqs='press/event_items#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/event_items#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/event_items#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/event_items#show {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4066,11 +4094,11 @@
   <td data-route-verb='PATCH'>
     PATCH
   </td>
-  <td data-route-path='/:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA))\/([^\/.?]+)\/events\/([^\/.?]+)\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+  <td data-route-path='/:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)' data-regexp='^\/((5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ))\/([^\/.?]+)\/events\/([^\/.?]+)\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
     /:organization_token/:edition_id/events/:event_id/:event_item_id(.:format)
   </td>
-  <td data-route-reqs='press/event_items#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}'>
-    press/event_items#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|ZXjY1Pu5XQ|llFh63hKOg|gYp-2O03SA/}
+  <td data-route-reqs='press/event_items#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}'>
+    press/event_items#update {:organization_token=&gt;/5Ye4Iw5GpQ|10phSHSIGQ|SE3eFct2ow|92QncJk_rQ|yq3Lx8-pgw|llFh63hKOg|gYp-2O03SA|ZXjY1Pu5XQ/}
   </td>
 </tr>
 <tr class='route_row' data-helper='path'>
@@ -4701,8 +4729,8 @@
 
 <div class="details">
   <div class="summary"><a href="#" onclick="return toggleSessionDump()">Toggle session dump</a></div>
-  <div id="session_dump" style="display:none"><pre>_csrf_token: &quot;W7yo16JsqP1Q9H9wBkR63z15fy7ZsnhKHjyhTAZrYYI=&quot;
-session_id: &quot;96bdc2c0c2e064e8ee2ff339481e2ce2&quot;</pre></div>
+  <div id="session_dump" style="display:none"><pre>_csrf_token: &quot;8/MpTgfYfM5vvuJKpa1ZpUIq6XIhPmwGCIlfrkKAQ3M=&quot;
+session_id: &quot;04013cad731a13c62dc8ef3d981ef01c&quot;</pre></div>
 </div>
 
 <div class="details">
@@ -4723,7 +4751,7 @@ SERVER_NAME: &quot;endless-city.festcamp.dev&quot;</pre></div>
 </body>
 </html>
 <div id="console"
-  data-remote-path='console/repl_sessions/540fc05d43bfabd4c2f7d2a5951c3286'
+  data-remote-path='console/repl_sessions/89a48c15473271dd9549c1ab82a6efd9'
   data-initial-prompt='>> '>
 </div>
 

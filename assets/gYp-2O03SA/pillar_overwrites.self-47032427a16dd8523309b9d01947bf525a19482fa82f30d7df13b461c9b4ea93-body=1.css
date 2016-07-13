@@ -13,3 +13,13 @@ footer {
 footer .footer__navigation {
   margin-bottom: 0;
 }
+
+/* line 15, /Users/holden/Code/paid-projects/festcamp/app/assets/stylesheets/gYp-2O03SA/pillar_overwrites.scss */
+.slider.height-40 .slides li {
+  min-height: 300px;
+}
+
+/* line 19, /Users/holden/Code/paid-projects/festcamp/app/assets/stylesheets/gYp-2O03SA/pillar_overwrites.scss */
+.imagebg {
+  min-height: 300px;
+}
